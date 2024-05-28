@@ -108,7 +108,9 @@ export function HomePage() {
   return (
     <div className="w-full flex align-center flex-col">
       {isLoading && <div>Loading...</div>}
+
       {isError && <div>Error</div>}
+
       <div className="flex">
         <div>Title</div>
         <input type="search" value={search ?? ''} onChange={(e) => setParam('search', e.target.value, searchParams, setSearchParams)} />
@@ -128,7 +130,11 @@ export function HomePage() {
       </div>
 
       <label>
-        <input type="checkbox" onChange={(e) => setParam('copyright', String(e.target.checked), searchParams, setSearchParams)} />
+        <input
+          type="checkbox"
+          checked={copyright === 'true' ? true : false}
+          onChange={(e) => setParam('copyright', String(e.target.checked), searchParams, setSearchParams)}
+        />
         Copyright
       </label>
 
