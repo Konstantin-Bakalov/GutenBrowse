@@ -4,7 +4,7 @@
 
 - Create a .env file in ./client (see .env.template)
 - Set the API url to `https://gutendex.com`
-- Move on directory up and use the docker-compose.yml file to start a container by running `docker compose up`
+- Move one directory up and use the docker-compose.yml file to start a container by running `docker compose up`
 
 ## Features
 
