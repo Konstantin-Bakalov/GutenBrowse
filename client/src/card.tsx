@@ -1,5 +1,6 @@
 import { Chip } from './chip';
-import { Book, languagesMap } from './home-page';
+import { languagesMap } from './search-fields';
+import { Book } from './types';
 
 interface CardProps {
   book: Book;
