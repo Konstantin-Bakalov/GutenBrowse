@@ -34,7 +34,7 @@ export function HomePage() {
   const page = searchParams.get('page') ?? '1';
 
   const { data, mutate, isLoading, isError } = useMutation({
-    mutationKey: ['mutation', searchParams],
+    mutationKey: ['mutation'],
     mutationFn: async (params: QueryParams) => getResponse(params),
   });
 
