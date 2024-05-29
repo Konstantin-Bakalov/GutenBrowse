@@ -1,5 +1,5 @@
 import { Card } from './card';
-import { Response } from './types';
+import { Response } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
 interface BooksGridProps {

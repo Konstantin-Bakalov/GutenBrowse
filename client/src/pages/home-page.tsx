@@ -1,13 +1,13 @@
-import axios from './main';
-import { config } from './config';
+import axios from '../main';
+import { config } from '../config';
 import { useSearchParams } from 'react-router-dom';
 import { isEmpty, omitBy } from 'lodash';
 import { useMutation } from 'react-query';
-import { QueryParams, Response } from './types';
-import { Header } from './header';
-import { SearchFields, setParam } from './search-fields';
-import { BooksGrid } from './books-grid';
-import { Pagination } from './pagination';
+import { QueryParams, Response } from '../types';
+import { Header } from '../components/header';
+import { SearchFields, setParam } from '../components/search-fields';
+import { BooksGrid } from '../components/books-grid';
+import { Pagination } from '../components/pagination';
 
 /**
  * @remark

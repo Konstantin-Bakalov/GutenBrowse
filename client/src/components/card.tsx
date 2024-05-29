@@ -1,6 +1,6 @@
 import { Chip } from './chip';
 import { languagesMap } from './search-fields';
-import { Book } from './types';
+import { Book } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
 interface CardProps {

@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HomePage } from './home-page';
+import { HomePage } from './pages/home-page';
 
 const queryClient = new QueryClient({
   defaultOptions: {
