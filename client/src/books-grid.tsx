@@ -1,5 +1,6 @@
 import { Card } from './card';
 import { Response } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
 interface BooksGridProps {
   data: Response | undefined;
@@ -20,9 +21,7 @@ export function BooksGrid({ data, onSubjectClicked }: BooksGridProps) {
           alignItems: 'flex-start',
         }}
       >
-        {data?.results.map((book, index) => (
-          <Card book={book} key={index} onSubjectClicked={(subject: string) => onSubjectClicked(subject)} />
-        ))}
+        {data?.results.map((book) => <Card book={book} key={uuidv4()} onSubjectClicked={(subject: string) => onSubjectClicked(subject)} />)}
       </div>
     </>
   );

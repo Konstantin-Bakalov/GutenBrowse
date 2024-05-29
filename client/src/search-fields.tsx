@@ -39,7 +39,6 @@ interface SearchFieldsProps {
   topic: string | null;
   sort: string | null;
   languages: string | null;
-  page: string;
   onSearch: () => void;
 }
 
@@ -51,7 +50,6 @@ export function SearchFields({
   topic,
   sort,
   languages,
-  //   page,
   searchParams,
   setSearchParams,
   onSearch,

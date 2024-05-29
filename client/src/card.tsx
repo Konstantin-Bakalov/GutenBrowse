@@ -1,6 +1,7 @@
 import { Chip } from './chip';
 import { languagesMap } from './search-fields';
 import { Book } from './types';
+import { v4 as uuidv4 } from 'uuid';
 
 interface CardProps {
   book: Book;
@@ -19,7 +20,7 @@ export function Card({ book, onSubjectClicked }: CardProps) {
           <div>
             By{' '}
             {book.authors.map((author) => (
-              <span>{author.name} </span>
+              <span key={uuidv4()}>{author.name} </span>
             ))}
           </div>
         </div>
@@ -33,7 +34,7 @@ export function Card({ book, onSubjectClicked }: CardProps) {
 
       <div className="flex gap-1 flex-wrap-reverse mt-auto">
         {book.subjects.map((subject) => (
-          <Chip text={subject} onClick={() => onSubjectClicked(subject)} />
+          <Chip text={subject} key={uuidv4()} onClick={() => onSubjectClicked(subject)} />
         ))}
       </div>
     </div>
